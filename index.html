@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don't Get Rick Rolled!</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <a class="logo" href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img src="images/rick.png" alt=""></a>
+
+            <img id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="Navigation">
+
+            <nav>
+                <ul class="main-nav">
+                    <img id="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="Close Navigation">
+                    <li>Home</li>
+                    <li><a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">About</a></li>
+                    <li><a href="#"></a>Contact</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <section class="game">
+        <div class="container">
+            <h1>Pick the right Rick, and you stay safe!</h1>
+            <div id="rickParent" class="grid">
+                <div id="r1" class="rick-card"><a id="a1" href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img src="images/rick.png" alt="Rick"></a></div>
+                <div id="r2" class="rick-card"><a id="a2" href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img src="images/rick.png" alt="Rick"></a></div>
+                <div id="r3" class="rick-card"><a id="a3" href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img src="images/rick.png" alt="Rick"></a></div>
+                <div id="r4" class="rick-card"><a id="a4" href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img src="images/rick.png" alt="Rick"></a></div>
+                <div id="r5" class="rick-card"><a id="a5" href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img src="images/rick.png" alt="Rick"></a></div>
+                <div id="r6" class="rick-card"><a id="a6" href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img src="images/rick.png" alt="Rick"></a></div>
+                <div id="r7" class="rick-card"><a id="a7" href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img src="images/rick.png" alt="Rick"></a></div>
+                <div id="r8" class="rick-card"><a id="a8" href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img src="images/rick.png" alt="Rick"></a></div>
+                <div id="r9" class="rick-card"><a id="a9" href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img src="images/rick.png" alt="Rick"></a></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2>Leave your name if you failed</h2>
+
+            <form action="">
+                <label for="name">Your Name</label>
+                <input type="text" id="" name="name" placeholder="Your Name" >
+
+                <input type="submit" class="send-message-cta" value="Send Message">
+            </form>
+        </div>
+    </section>
+
+    <section class="information-section">
+        <div class="container">
+            <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><h2>Never Gonna Give You Up by Rick Astley</h2></a>
+
+            <ul class="information-list">
+                <li>Recorded in 1986/Released in 1987</li>
+                <li>Genre: Dance-pop, blue-eyed soul</li>
+                <li>Songwriter: Stock Aitken Waterman</li>
+                <li>The song won best British Single at the 1988 Brit Awards</li>
+            </ul>
+
+            <ul class="quotes">
+                <li>
+                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><img src="images/album.png" alt="Album Cover"></a>
+
+                    <blockquote>"You can't explain the feeling of singing hit songs to an audience - it's like being a genuine sports star at the peak of their powers."</blockquote>
+                    <cite>-Rick Astley</cite>
+                </li>
+            </ul>
+            <div class="home">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38008.97561920912!2d-2.6379848999999997!3d53.4584338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b0361d1109e1b%3A0xf526c8fe7bb73027!2sNewton-le-Willows%2C%20UK!5e0!3m2!1sen!2sza!4v1659509416926!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const mobileBtn = document.getElementById("mobile-cta")
+        nav = document.querySelector('nav')
+                mobileBtnExit = document.getElementById('mobile-exit');
+
+        mobileBtn.addEventListener('click', ()=> {
+            nav.classList.add('menu-btn');
+        });
+
+        mobileBtnExit.addEventListener('click', () => {
+            nav.classList.remove('menu-btn');
+        });
+
+        class numPicker {
+            constructor(x) {
+                this.x = x;
+                x = 0;
+                x = Math.floor(Math.random() * 9) + 1;
+
+                const randomElement = document.getElementById("r" + x)
+                console.log(randomElement);
+
+                const randomAnchor = document.getElementById("a" + x)
+                randomAnchor.removeAttribute("href");
+            }
+        }
+
+        const picker = new numPicker();
+    </script>
+</body>
+</html>
